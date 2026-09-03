@@ -1,0 +1,26 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# configurazione locale: contiene token e chat id
+rocca.local.yaml
+*.local.yaml
+
+# contenuti e output
+clip/
+ritratto/
+carosello/
+montati/
+archivio/
+assets/
+*.mp4
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.heic
+
+# backup
+*.bak
+*.precedente
+*.nuovo

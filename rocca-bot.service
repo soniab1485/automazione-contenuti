@@ -1,0 +1,13 @@
+[Unit]
+Description=Rocca Bot - sistema contenuti La Rocca del Pavone
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/Rocca
+ExecStart=/usr/bin/python3 %h/Rocca/rocca-bot.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

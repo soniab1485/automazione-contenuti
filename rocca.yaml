@@ -1,0 +1,169 @@
+# ============================================================
+#  LA ROCCA DEL PAVONE — configurazione del sistema contenuti
+#  Tutto quello che si tocca sta qui dentro.
+# ============================================================
+
+generale:
+  base: "~/Rocca"          # cartella radice
+  uscita: "montati"        # dove finiscono i video, dentro base
+  assets: "assets"         # card, loghi, font
+
+telegram:
+  token: ""                # da @BotFather
+  chat_id: ""              # il tuo id numerico
+
+# I colori del brand. Usati dalle transizioni e dalle gradazioni.
+palette:
+  salvia: "#4A5D23"
+  formenton: "#B8966E"
+  panna: "#F9F6F0"
+
+# ------------------------------------------------------------
+#  PRESET — ogni tipo di contenuto ha il suo
+#  Si lanciano con:  monta.py <nome_preset> [giorni]
+# ------------------------------------------------------------
+preset:
+
+  recap:
+    descrizione: "Recap settimanale — diario per chi già ti segue"
+    sorgente: "clip"
+    giorni: 7
+    max_elementi: 20
+    selezione: "recenti"       # recenti | distribuita
+    formato: [1080, 1920]
+    fps: 30
+    ordine: "alternato"        # cronologico | alternato | casuale
+    data_da: "scatto"          # scatto | file
+    foto:
+      durata: 1.8
+      zoom: 0.0033             # escursione totale, non per fotogramma
+      verso: "alterna"         # dentro | fuori | alterna | fermo
+    video:
+      durata: 2.5
+      salta_inizio: 0.5
+    card:
+      intro: "intro.png"
+      outro: "outro.png"
+      durata: 1.8
+    transizione:
+      tipo: "rocca"            # taglio | dissolvenza | rocca | rocca-tutto
+      durata_luce: 0.45
+      fusione: 0.18
+    colore:
+      gradazione: "salvia_leggero"
+      vignetta: 0.0
+
+  mensile:
+    descrizione: "Recap mensile"
+    eredita: "recap"
+    giorni: 30
+    max_elementi: 20
+    foto:
+      durata: 1.6
+      zoom: 0.0035
+
+  trimestrale:
+    descrizione: "Trimestrale — l'evoluzione dell'azienda in 90 giorni"
+    sorgente: "clip"
+    giorni: 90
+    max_elementi: 20
+    selezione: "distribuita"   # campiona su tutto il periodo, non solo il finale
+    formato: [1080, 1920]
+    fps: 30
+    ordine: "cronologico"      # l'evoluzione si legge solo in ordine
+    data_da: "scatto"
+    foto:
+      durata: 1.6
+      zoom: 0.0030
+      verso: "dentro"
+    video:
+      durata: 2.0
+      salta_inizio: 0.5
+    card:
+      intro: "intro.png"
+      outro: "outro.png"
+      durata: 1.8
+    transizione:
+      tipo: "rocca"
+      durata_luce: 0.45
+      fusione: 0.18
+    colore:
+      gradazione: "salvia_leggero"
+      vignetta: 0.10
+
+  ritratto:
+    descrizione: "Ritratto di razza — lento, contemplativo"
+    sorgente: "ritratto"
+    giorni: 3650
+    max_elementi: 10
+    formato: [1080, 1920]
+    fps: 30
+    ordine: "cronologico"
+    data_da: "scatto"
+    foto:
+      durata: 3.0
+      zoom: 0.0022
+      verso: "dentro"          # sempre in avvicinamento: dà solennità
+    video:
+      durata: 4.0
+      salta_inizio: 0.5
+    card:
+      intro: "intro.png"
+      outro: "outro.png"
+      durata: 2.2
+    transizione:
+      tipo: "dissolvenza"
+      fusione: 0.5
+    colore:
+      gradazione: "salvia_forte"
+      vignetta: 0.25
+
+  carosello:
+    descrizione: "Carosello 4:5 per post informativi"
+    sorgente: "carosello"
+    giorni: 3650
+    max_elementi: 10
+    formato: [1080, 1350]
+    fps: 30
+    ordine: "cronologico"
+    data_da: "scatto"
+    foto:
+      durata: 2.5
+      zoom: 0.0
+      verso: "fermo"           # niente movimento: si legge
+    video:
+      durata: 2.5
+      salta_inizio: 0.5
+    card:
+      intro: null
+      outro: "outro.png"
+      durata: 1.5
+    transizione:
+      tipo: "taglio"
+    colore:
+      gradazione: "nessuno"
+      vignetta: 0.0
+
+# ------------------------------------------------------------
+#  GRADAZIONI COLORE
+#  Costruite sui colori del brand: verdi verso il salvia,
+#  alte luci verso il formenton.
+# ------------------------------------------------------------
+gradazioni:
+
+  nessuno: ""
+
+  salvia_leggero: >-
+    eq=contrast=1.06:saturation=1.04:gamma=1.02,
+    colorbalance=rs=-0.02:gs=0.03:bs=-0.03:rm=0.01:gm=0.02:bm=-0.03:rh=0.04:gh=0.01:bh=-0.05
+
+  salvia_forte: >-
+    eq=contrast=1.12:saturation=1.10:gamma=1.03,
+    colorbalance=rs=-0.04:gs=0.06:bs=-0.05:rm=0.02:gm=0.04:bm=-0.05:rh=0.07:gh=0.02:bh=-0.08
+
+  caldo: >-
+    eq=contrast=1.05:saturation=1.08,
+    colorbalance=rm=0.05:gm=0.02:bm=-0.05:rh=0.06:bh=-0.06
+
+  smorzato: >-
+    eq=contrast=0.95:saturation=0.85:brightness=0.02
