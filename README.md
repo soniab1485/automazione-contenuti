@@ -13,9 +13,11 @@ solo file YAML.
 
 **Questo non è un prodotto e non è mantenuto.**
 
-È un sistema costruito su misura per una specifica azienda agricola, pubblicato
-come materiale di accompagnamento a
-[questo articolo](INSERIRE_URL_ARTICOLO).
+È un sistema costruito su misura per una specifica azienda agricola
+([La Rocca del Pavone](https://laroccadelpavone.it/), Garfagnana), pubblicato
+come esempio di come si può automatizzare la produzione di contenuti social
+con strumenti liberi. Chi l'ha scritto e perché:
+[soniabastiani.it](https://soniabastiani.it/).
 
 - Nessun supporto
 - Nessuna richiesta di funzionalità
@@ -125,6 +127,16 @@ di quel filtro.
 **Campionamento distribuito.** Su una finestra lunga, tenere gli ultimi N file
 mostrerebbe solo la fine del periodo. Per raccontare un'evoluzione serve un
 campione lungo tutto l'arco, primo e ultimo compresi.
+
+## Autore
+
+**Sonia Bastiani** — consulente SEO e Google Ads, sviluppo WordPress e
+automazioni, docente di digital marketing e AI generativa. Lavora a Lucca e da
+remoto, e conduce l'azienda agricola per cui questo sistema è nato.
+
+- Sito e servizi: <https://soniabastiani.it/>
+- LinkedIn: <https://www.linkedin.com/in/sonia-bastiani/>
+- L'azienda agricola: <https://laroccadelpavone.it/>
 
 ## Licenza
 
